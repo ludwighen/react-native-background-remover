@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { View, Image, Button, ActivityIndicator } from 'react-native';
+import { View, Image, ActivityIndicator } from 'react-native';
 import { launchImageLibraryAsync, MediaTypeOptions } from 'expo-image-picker';
+import { Button, ButtonText } from '@gluestack-ui/themed';
 import { HomeScreenPropType } from '../../types';
 import { removeBackground, saveImageLocally } from './helpers';
 
@@ -53,7 +54,9 @@ function Home(props: HomeScreenPropType) {
         />
       )}
       {isLoading && <ActivityIndicator style={{ marginTop: 20 }} />}
-      <Button title="Select image" onPress={pickImage} />
+      <Button onPress={pickImage} mt={20}>
+        <ButtonText>Select image</ButtonText>
+      </Button>
     </View>
   );
 }
