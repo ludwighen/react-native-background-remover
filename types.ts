@@ -1,4 +1,5 @@
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import type { SkPath } from '@shopify/react-native-skia';
 
 export type RootStackParamList = {
   Home: undefined;
@@ -21,4 +22,11 @@ export type EditorScreenPropType = NativeStackScreenProps<
 export type ImageBody = {
   fileName: string;
   base64: string;
+};
+
+export type PathWithWidth = {
+  path: SkPath;
+  strokeWidth: number;
+  blendMode?: string;
+  id: string;
 };

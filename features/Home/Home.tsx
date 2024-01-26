@@ -19,7 +19,7 @@ function Home(props: HomeScreenPropType) {
       fileName: 'cutout.png',
       base64: base64Cutout,
     });
-    navigation.navigate('Editor', { imageUri: image, cutoutUri });
+    navigation.navigate('Editor', { imageUri: uri, cutoutUri });
   };
 
   const pickImage = async () => {

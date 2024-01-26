@@ -17,14 +17,18 @@
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
-        "NSPhotoLibraryUsageDescription": "The app lets you upload images to remove the background.",
-      }
+        "NSPhotoLibraryUsageDescription": "The app lets you upload images to remove the background."
+      },
+      "bundleIdentifier": "com.ludwighen.reactnativebackgroundremover"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -36,6 +40,11 @@
           "photosPermission": "The app accesses your photos to let you share them with your friends."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "ef3d586d-9221-4233-8ae7-042f1245b012"
+      }
+    }
   }
 }
